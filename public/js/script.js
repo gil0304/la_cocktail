@@ -9,6 +9,12 @@ const options = {
     pauseOnHover: false,
     pauseOnFocus: true,
   },
+  breakpoints: {
+    450: {
+      perPage: 1,
+      speed: 0.8,
+    },
+  },
 };
 
 const splide = new Splide(".splide", options);

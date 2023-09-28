@@ -16,6 +16,10 @@ h2 {
   color: #ffe943;
 }
 
+.sp-svg {
+  display: none;
+}
+
 .top {
   margin-top: 11.59722vw;
   position: relative;
@@ -32,6 +36,40 @@ h2 {
   left: 65.13889vw;
   font-size: 4.44444vw;
   letter-spacing: 1.33333vw;
+}
+
+.sp-top {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .pc-svg {
+    display: none;
+  }
+  .sp-svg {
+    display: block;
+  }
+  .top {
+    display: none;
+  }
+  .sp-top {
+    display: block;
+    position: relative;
+  }
+  .sp-top img {
+    width: 100vw;
+  }
+  .sp-top h1 {
+    position: absolute;
+    top: 94.4vw;
+    right: 7.46667vw;
+    font-size: 8.53333vw;
+    letter-spacing: 1.70667vw;
+    line-height: 1.7;
+  }
+  .header {
+    display: none;
+  }
 }
 
 .about {
@@ -80,6 +118,33 @@ h2 {
   font-size: 1.11111vw;
   line-height: 3;
   text-align: center;
+}
+
+.about .content .sp-br {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    margin-top: 23.73333vw;
+  }
+  .about .svg {
+    top: -15.73333vw;
+    width: 69.33333vw;
+    height: 81.33333vw;
+  }
+  .about .content h2 {
+    margin-top: 0;
+    font-size: 4.26667vw;
+  }
+  .about .content p {
+    margin-top: 16vw;
+    font-size: 3.2vw;
+    line-height: 2;
+  }
+  .about .content .sp-br {
+    display: inline;
+  }
 }
 
 .cocktail {
@@ -208,6 +273,43 @@ h2 {
   visibility: visible;
 }
 
+@media screen and (max-width: 450px) {
+  .cocktail {
+    margin-top: 37.06667vw;
+  }
+  .cocktail .bar {
+    margin-top: 7.73333vw;
+  }
+  .cocktail .bar .slider {
+    top: -2.66667vw;
+  }
+  .cocktail .bar .table {
+    height: 61.62133vw;
+  }
+  .cocktail .bar .splide .glass .rock {
+    width: 13.6vw;
+    height: 19.35733vw;
+    margin-top: 16.98133vw;
+  }
+  .cocktail .bar .splide .glass .long {
+    width: 22.93333vw;
+    height: 36.35733vw;
+  }
+  .cocktail .bar .splide .glass .cocktail-glass {
+    width: 19.52267vw;
+    height: 31.624vw;
+    margin-top: 4.53333vw;
+  }
+  .cocktail .bar .splide .glass .wine {
+    width: 15.57333vw;
+    height: 34.66667vw;
+    margin-top: 1.6vw;
+  }
+  .cocktail h2 {
+    font-size: 4.26667vw;
+  }
+}
+
 .store {
   margin-top: 12.70833vw;
   padding-top: 14.79167vw;
@@ -297,6 +399,49 @@ h2 {
   font-size: 1.66667vw;
 }
 
+@media screen and (max-width: 450px) {
+  .store {
+    margin-top: 28.77867vw;
+  }
+  .store .svg-store-1 {
+    top: 92.8vw;
+    width: 63.46667vw;
+    height: 93.06667vw;
+  }
+  .store .svg-store-2 {
+    top: 239.73333vw;
+    left: 62.13333vw;
+    width: 37.86667vw;
+    height: 81.33333vw;
+  }
+  .store h2 {
+    font-size: 4.26667vw;
+  }
+  .store .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10.4vw;
+  }
+  .store .container:nth-child(2) {
+    margin: 38.93333vw 0;
+  }
+  .store .container img {
+    width: 45.33333vw;
+    height: 32.57067vw;
+  }
+  .store .content {
+    row-gap: 8vw;
+  }
+  .store .content p {
+    font-size: 3.2vw;
+  }
+  .store .content p span {
+    font-size: 3.73333vw;
+  }
+}
+
 .footer {
   margin: 33.68056vw 0 4.72222vw;
 }
@@ -305,5 +450,14 @@ h2 {
   font-family: superior-title, serif;
   font-size: 0.83333vw;
   text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    margin: 20.53333vw 0 21;
+  }
+  .footer p {
+    font-size: 2.13333vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
