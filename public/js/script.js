@@ -21,15 +21,18 @@ const splide = new Splide(".splide", options);
 splide.mount(window.splide.Extensions);
 
 const icebreaker = document.getElementById("icebreaker");
-let modal = document.getElementsByName("modal");
+let modal = document.getElementById("modal");
 
 window.addEventListener("load", () => {
   console.log(icebreaker);
 });
 
 function modalOpen() {
-  console.log("aaa");
   modal.classList.add("is-show");
 }
 
 icebreaker.addEventListener("click", modalOpen);
+
+splide.on("click", function () {
+  modalOpen();
+});

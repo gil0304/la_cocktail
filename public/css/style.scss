@@ -257,7 +257,11 @@ h2 {
     }
   }
 
-  .modal {
+  #modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
