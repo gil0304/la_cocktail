@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://use.typekit.net/yyu4vbk.css");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+body {
+  background-color: #040b1e;
+  color: #fef9f9;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1 {
+  font-family: "Sawarabi Mincho", serif;
+}
+
+h2 {
+  font-family: superior-title, serif;
+  color: #ffe943;
+}
+
+.top {
+  margin-top: 11.59722vw;
+  position: relative;
+}
+
+.top .top-img {
+  width: 100vw;
+  height: 41.38889vw;
+}
+
+.top h1 {
+  position: absolute;
+  top: 14.02778vw;
+  left: 65.13889vw;
+  font-size: 4.44444vw;
+  letter-spacing: 1.33333vw;
+}
+
+.about {
+  margin-top: 14.79167vw;
+  position: relative;
+}
+
+.about .svg {
+  position: absolute;
+  top: -2.56944vw;
+  right: 0;
+  width: 44.16667vw;
+  height: 83.33333vw;
+  z-index: -1;
+}
+
+.about .header {
+  position: absolute;
+  top: 0;
+  left: 0.41667vw;
+  width: 51.59722vw;
+  height: 21.94444vw;
+}
+
+.about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .content h2 {
+  margin-top: 14.65278vw;
+  font-size: 2.22222vw;
+  font-weight: 900;
+}
+
+.about .content p {
+  margin-top: 11.11111vw;
+  font-size: 1.11111vw;
+  line-height: 3;
+  text-align: center;
+}
+
+.cocktail {
+  margin-top: 23.05556vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cocktail .header {
+  position: absolute;
+  top: 0;
+  left: 0.41667vw;
+  width: 71.11111vw;
+  height: 21.94444vw;
+}
+
+.cocktail h2 {
+  margin-top: 14.79167vw;
+  font-weight: 900;
+  font-size: 2.22222vw;
+}
+
+.cocktail .bar {
+  margin-top: 11.25vw;
+  position: relative;
+}
+
+.cocktail .bar .slider {
+  position: absolute;
+  top: 6.25vw;
+}
+
+.cocktail .bar .table {
+  width: 100vw;
+  height: 53.88889vw;
+}
+
+.cocktail .bar .splide {
+  width: 100vw;
+}
+
+.cocktail .bar .splide .splide__list {
+  position: relative;
+}
+
+.cocktail .bar .splide .is-active .glass {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 1;
+}
+
+.cocktail .bar .splide .glass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.cocktail .bar .splide .glass img {
+  vertical-align: baseline;
+}
+
+.cocktail .bar .splide .glass .rock {
+  width: 7.70833vw;
+  height: 10.97222vw;
+  margin-top: 11.45833vw;
+}
+
+.cocktail .bar .splide .glass .long {
+  width: 14.23611vw;
+  height: 22.56944vw;
+}
+
+.cocktail .bar .splide .glass .cocktail-glass {
+  width: 11.875vw;
+  height: 19.23611vw;
+  margin-top: 3.33333vw;
+}
+
+.cocktail .bar .splide .glass .wine {
+  width: 10.13889vw;
+  height: 22.56944vw;
+  margin-top: 0.13889vw;
+}
+
+.cocktail .bar .splide .glass p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.11111vw;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.cocktail .modal {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.cocktail .modal.is-show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.store {
+  margin-top: 12.70833vw;
+  padding-top: 14.79167vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.store .svg {
+  position: absolute;
+  left: 0;
+  top: 21.45833vw;
+  width: 84.72222vw;
+  height: 79.09722vw;
+  z-index: -1;
+}
+
+.store .header {
+  position: absolute;
+  top: 0;
+  left: 0.41667vw;
+  width: 45vw;
+  height: 21.94444vw;
+}
+
+.store h2 {
+  font-weight: 900;
+  font-size: 2.22222vw;
+}
+
+.store .store-warp {
+  margin-top: 10.20833vw;
+}
+
+.store .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15vw;
+          column-gap: 15vw;
+}
+
+.store .container:nth-child(2) {
+  margin: 12.43056vw 0 14.02778vw;
+}
+
+.store .container img {
+  width: 21.45833vw;
+  height: 15.41667vw;
+}
+
+.store .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 3.125vw;
+}
+
+.store .content p {
+  text-align: center;
+  font-size: 1.11111vw;
+  line-height: 2;
+}
+
+.store .content p span {
+  font-size: 1.66667vw;
+}
+
+.footer {
+  margin: 33.68056vw 0 4.72222vw;
+}
+
+.footer p {
+  font-family: superior-title, serif;
+  font-size: 0.83333vw;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

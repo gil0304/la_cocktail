@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://use.typekit.net/yyu4vbk.css");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+
+@function pc-vw($pixel) {
+  $viewport: 1440;
+  @return ($pixel / $viewport * 100vw);
+}
+
+body {
+  background-color: #040b1e;
+  color: #fef9f9;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1 {
+  font-family: "Sawarabi Mincho", serif;
+}
+
+h2 {
+  font-family: superior-title, serif;
+  color: #ffe943;
+}
+
+.top {
+  margin-top: pc-vw(167);
+  position: relative;
+
+  .top-img {
+    width: pc-vw(1440);
+    height: pc-vw(596);
+  }
+
+  h1 {
+    position: absolute;
+    top: pc-vw(202);
+    left: pc-vw(938);
+    font-size: pc-vw(64);
+    letter-spacing: pc-vw(64) * 0.3;
+  }
+}
+
+.about {
+  margin-top: pc-vw(213);
+  position: relative;
+
+  .svg {
+    position: absolute;
+    top: pc-vw(-37);
+    right: 0;
+    width: pc-vw(636);
+    height: pc-vw(1200);
+    z-index: -1;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: pc-vw(6);
+    width: pc-vw(743);
+    height: pc-vw(316);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      margin-top: pc-vw(211);
+      font-size: pc-vw(32);
+      font-weight: 900;
+    }
+
+    p {
+      margin-top: pc-vw(160);
+      font-size: pc-vw(16);
+      line-height: 3;
+      text-align: center;
+    }
+  }
+}
+
+.cocktail {
+  margin-top: pc-vw(332);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: pc-vw(6);
+    width: pc-vw(1024);
+    height: pc-vw(316);
+  }
+
+  h2 {
+    margin-top: pc-vw(213);
+    font-weight: 900;
+    font-size: pc-vw(32);
+  }
+
+  .bar {
+    margin-top: pc-vw(162);
+    position: relative;
+
+    .slider {
+      position: absolute;
+      top: pc-vw(90);
+    }
+
+    .table {
+      width: pc-vw(1440);
+      height: pc-vw(776);
+    }
+
+    .splide {
+      width: pc-vw(1440);
+
+      .splide__list {
+        position: relative;
+      }
+
+      .is-active {
+        .glass {
+          transform: scale(1);
+          z-index: 1;
+        }
+      }
+
+      .glass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0.8);
+        transition: 0.7s;
+
+        img {
+          vertical-align: baseline;
+        }
+
+        .rock {
+          width: pc-vw(111);
+          height: pc-vw(158);
+          margin-top: pc-vw(165);
+        }
+
+        .long {
+          width: pc-vw(205);
+          height: pc-vw(325);
+        }
+
+        .cocktail-glass {
+          width: pc-vw(171);
+          height: pc-vw(277);
+          margin-top: pc-vw(48);
+        }
+
+        .wine {
+          width: pc-vw(146);
+          height: pc-vw(325);
+          margin-top: pc-vw(2);
+        }
+
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: pc-vw(16);
+          font-family: "Sawarabi Mincho", serif;
+        }
+      }
+    }
+  }
+
+  .modal {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 1s ease;
+
+    &.is-show {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+}
+
+.store {
+  margin-top: pc-vw(183);
+  padding-top: pc-vw(213);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .svg {
+    position: absolute;
+    left: 0;
+    top: pc-vw(309);
+    width: pc-vw(1220);
+    height: pc-vw(1139);
+    z-index: -1;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: pc-vw(6);
+    width: pc-vw(648);
+    height: pc-vw(316);
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: pc-vw(32);
+  }
+
+  .store-warp {
+    margin-top: pc-vw(147);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    column-gap: pc-vw(216);
+
+    &:nth-child(2) {
+      margin: pc-vw(179) 0 pc-vw(202);
+    }
+
+    img {
+      width: pc-vw(309);
+      height: pc-vw(222);
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: pc-vw(45);
+
+    p {
+      text-align: center;
+      font-size: pc-vw(16);
+      line-height: 2;
+
+      span {
+        font-size: pc-vw(24);
+      }
+    }
+  }
+}
+
+.footer {
+  margin: pc-vw(485) 0 pc-vw(68);
+
+  p {
+    font-family: superior-title, serif;
+    font-size: pc-vw(12);
+    text-align: center;
+  }
+}

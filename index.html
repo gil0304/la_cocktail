@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIL's Cocktail</title>
+    <!-- splide.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+    <!-- splide.css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide-core.min.css">
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <div class="top">
+        <img src="public/images/fv.svg" class="top-img" alt="top" />
+        <h1>いっぽ<br>大人の世界へ</h1>
+    </div>
+    <div class="about">
+        <img src="public/images/about-vector.svg" class="svg" alt="svg" />
+        <img src="public/images/about.svg" class="header" alt="about" />
+        <div class="content">
+            <h2>-About-</h2>
+            <p>
+                大人の世界へようこそ<br />
+                このサイトではその日の気分に合うカクテル言葉からおすすめの一品を見つけられます
+            </p>
+        </div>
+    </div>
+    <div class="cocktail">
+        <img src="public/images/cocktail.svg" class="header" alt="cocktail" />
+        <h2>-Cocktail-</h2>
+        <div class="bar">
+            <div class="slider">
+                <div class="splide" aria-label="Splideの基本的なHTML">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div id="icebreaker" class="glass">
+                                        <img src="public/images/glass-icebreaker.png" class="rock" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="el-diablo" class="glass"> 
+                                        <img src="public/images/glass-el-diablo.png" class="rock" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="tequila-sunrise" class="glass">
+                                        <img src="public/images/glass-tequila-sunrise.png" class="wine" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="paloma" class="glass">
+                                        <img src="public/images/glass-paloma.png" class="long" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="broadway-thirst" class="glass">
+                                        <img src="public/images/glass-broadway-thirst.png" class="cocktail-glass" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="matador" class="glass">
+                                        <img src="public/images/glass-matador.png" class="rock" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="margarita" class="glass">
+                                        <img src="public/images/glass-margarita.png" class="cocktail-glass" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div id="mockinbird" class="glass">
+                                        <img src="public/images/glass-mockingbird.png" class="cocktail-glass" alt="">
+                                    </div>
+                                </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="public/images/bar-table.svg" class="table" alt="table" />
+        </div>
+        <div class="modal modal-icebreaker">
+            <p>aaaa</p>
+        </div>
+    </div>
+    <div class="store">
+        <img src="public/images/store-vector.svg" class="svg" alt="svg" />
+        <img src="public/images/store.svg" class="header" alt="atore" />
+        <h2>-Store-</h2>
+        <div class="store-warp">
+            <div class="container">
+                <img src="public/images/store1.svg" alt="store1" />
+                <div class="content">
+                    <p>
+                        <span>ビー・バー・ロッポンギ</span><br />
+                        東京都港区六本木6-12-1 六本木ヒルズ 1F
+                    </p>
+                    <p>
+                        「バカラ ショップ六本木」に併設する B bar Roppongiは、<br />
+                        隠れ家的な佇まいが魅力のバーです。<br />
+                        お酒やシガー、そしてフードは<br />
+                        最高のクオリティのものを厳選してご用意。<br />
+                        ドリンクは様々なデザインのバカラグラスの中から<br />
+                        お客様に合ったものをお選びしてサーブします。
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="public/images/store2.svg" alt="store2" />
+                <div class="content">
+                    <p>
+                        <span>Senza Cravatta</span><br />
+                        東京都港区六本木4-4-4 メゾン六本木 B1F
+                    </p>
+                    <p>
+                        六本木駅から至近の地下にある大人のバー。<br />
+                        重厚感のあるカウンター、アンティークなテーブル席に<br />
+                        しっとりとした座りやすいソファで<br />
+                        大人の落ち着いた雰囲気が漂うオーセンティックバー。
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="public/images/store3.svg" alt="store3" />
+                <div class="content">
+                    <p>
+                        <span>Carpe diem</span><br />
+                        東京都港区六本木4-5-6 南蛮ビル B1F
+                    </p>
+                    <p>
+                        六本木交差点から三分ほど。<br />
+                        青い階段を降りるとそこは岩石に囲まれた別世界のバー。<br />
+                        ここは歩んできた道を静かに振り返ったり、<br />
+                        紳士淑女が貴重な時間を共有するところ。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; gil's cocktail</p>
+    </div>
+    <script type="module" src="/public/js/script.js"></script>
+</body>
+</html>
