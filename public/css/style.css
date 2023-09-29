@@ -259,7 +259,9 @@ h2 {
   font-family: "Sawarabi Mincho", serif;
 }
 
-.cocktail #modal {
+.cocktail .modal {
+  width: 70.48611vw;
+  height: 83.33333vw;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -272,10 +274,11 @@ h2 {
   transition: all 1s ease;
 }
 
-.cocktail #modal.is-show {
+.cocktail .modal.is-show {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+  z-index: 10;
 }
 
 @media screen and (max-width: 450px) {
@@ -464,5 +467,145 @@ h2 {
   .footer p {
     font-size: 2.13333vw;
   }
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.title {
+  font-size: 4.72906vw;
+  font-family: "Sawarabi Mincho", serif;
+  margin: 10.93596vw 0 -0.09852vw;
+}
+
+.subtitle {
+  font-size: 1.97044vw;
+  text-align: center;
+}
+
+.cocktail-about {
+  width: 100vw;
+  margin-top: 1.87192vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 27.29064vw;
+          column-gap: 27.29064vw;
+}
+
+.cocktail-about img {
+  width: 26.40394vw;
+  height: 4.92611vw;
+}
+
+.cocktail-about .content p:nth-child(1) {
+  font-size: 1.57635vw;
+}
+
+.cocktail-about .content p:nth-child(2) {
+  font-size: 2.36453vw;
+  font-weight: bold;
+  margin-top: 0.39409vw;
+}
+
+.icebreaker .main {
+  width: 56.84729vw;
+  height: 73.10345vw;
+}
+
+.material {
+  margin-top: 8.17734vw;
+}
+
+.material img {
+  position: absolute;
+  top: 107.88177vw;
+  right: 0;
+  width: 64.53202vw;
+  z-index: -1;
+}
+
+.material table {
+  width: 50.44335vw;
+  height: 18.71921vw;
+  margin-top: 3.25123vw;
+}
+
+.material table td {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #fef9f9;
+}
+
+.material table td p {
+  text-align: center;
+  font-size: 1.57635vw;
+}
+
+.recipe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 6.30542vw;
+}
+
+.recipe .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 7.68473vw;
+          column-gap: 7.68473vw;
+  margin-top: 9.85222vw;
+}
+
+.recipe .recipe-3 {
+  width: 5.91133vw;
+  height: 36.25616vw;
+}
+
+.recipe .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 14.58128vw;
+  margin-top: 0.59113vw;
+}
+
+.recipe .content p {
+  font-size: 1.57635vw;
+}
+
+.impression {
+  margin: 14.6798vw 0 9.16256vw;
+}
+
+.impression .content {
+  margin-top: 8.07882vw;
 }
 /*# sourceMappingURL=style.css.map */

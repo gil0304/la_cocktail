@@ -12,6 +12,11 @@
   @return ($pixel / $viewport * 100vw);
 }
 
+@function modal-vw($pixel) {
+  $viewport: 1015;
+  @return ($pixel / $viewport * 100vw);
+}
+
 body {
   background-color: #040b1e;
   color: #fef9f9;
@@ -257,7 +262,9 @@ h2 {
     }
   }
 
-  #modal {
+  .modal {
+    width: pc-vw(1015);
+    height: pc-vw(1200);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -271,6 +278,7 @@ h2 {
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
+      z-index: 10;
     }
   }
 }
@@ -458,5 +466,124 @@ h2 {
     p {
       font-size: sp-vw(8);
     }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  font-size: modal-vw(48);
+  font-family: "Sawarabi Mincho", serif;
+  margin: modal-vw(111) 0 modal-vw(-1);
+}
+
+.subtitle {
+  font-size: modal-vw(20);
+  text-align: center;
+}
+
+.cocktail-about {
+  width: modal-vw(1015);
+  margin-top: modal-vw(19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: modal-vw(277);
+
+  img {
+    width: modal-vw(268);
+    height: modal-vw(50);
+  }
+
+  .content {
+    p {
+      &:nth-child(1) {
+        font-size: modal-vw(16);
+      }
+
+      &:nth-child(2) {
+        font-size: modal-vw(24);
+        font-weight: bold;
+        margin-top: modal-vw(4);
+      }
+    }
+  }
+}
+
+.icebreaker {
+  .main {
+    width: modal-vw(577);
+    height: modal-vw(742);
+  }
+}
+
+.material {
+  margin-top: modal-vw(83);
+
+  img {
+    position: absolute;
+    top: modal-vw(1095);
+    right: 0;
+    width: modal-vw(655);
+    z-index: -1;
+  }
+
+  table {
+    width: modal-vw(512);
+    height: modal-vw(190);
+    margin-top: modal-vw(33);
+
+    td {
+      width: 50%;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #fef9f9;
+
+      p {
+        text-align: center;
+        font-size: modal-vw(16);
+      }
+    }
+  }
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  margin-top: modal-vw(64);
+
+  .container {
+    display: flex;
+    column-gap: modal-vw(78);
+    margin-top: modal-vw(100);
+  }
+
+  .recipe-3 {
+    width: modal-vw(60);
+    height: modal-vw(368);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: modal-vw(148);
+    margin-top: modal-vw(6);
+
+    p {
+      font-size: modal-vw(16);
+    }
+  }
+}
+
+.impression {
+  margin: modal-vw(149) 0 modal-vw(93);
+
+  .content {
+    margin-top: modal-vw(82);
   }
 }
