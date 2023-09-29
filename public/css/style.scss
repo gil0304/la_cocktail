@@ -281,6 +281,25 @@ h2 {
       z-index: 10;
     }
   }
+
+  #close {
+    position: fixed;
+    top: pc-vw(90);
+    right: pc-vw(240);
+    width: modal-vw(60);
+    height: modal-vw(60);
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 1s ease;
+
+    &.is-show {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {

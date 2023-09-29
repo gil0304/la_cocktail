@@ -281,6 +281,26 @@ h2 {
   z-index: 10;
 }
 
+.cocktail #close {
+  position: fixed;
+  top: 6.25vw;
+  right: 16.66667vw;
+  width: 5.91133vw;
+  height: 5.91133vw;
+  z-index: 11;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.cocktail #close.is-show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
 @media screen and (max-width: 450px) {
   .cocktail {
     margin-top: 37.06667vw;
