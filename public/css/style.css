@@ -181,7 +181,7 @@ h2 {
   position: relative;
 }
 
-.cocktail .bar .slider {
+.cocktail .bar #slider {
   position: absolute;
   top: 6.25vw;
 }
@@ -260,13 +260,13 @@ h2 {
 }
 
 .cocktail .modal {
-  width: 70.48611vw;
-  height: 83.33333vw;
+  width: 41.66667vw;
+  height: 100vh;
   position: fixed;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -281,24 +281,25 @@ h2 {
   z-index: 10;
 }
 
-.cocktail #close {
-  position: fixed;
-  top: 6.25vw;
-  right: 16.66667vw;
-  width: 5.91133vw;
-  height: 5.91133vw;
-  z-index: 11;
+.cocktail #mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
   opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
   visibility: hidden;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-.cocktail #close.is-show {
-  opacity: 1;
+.cocktail #mask.is-show {
+  opacity: 0.8;
   pointer-events: auto;
   visibility: visible;
+  z-index: 9;
 }
 
 @media screen and (max-width: 450px) {
@@ -309,7 +310,7 @@ h2 {
     margin-top: 7.73333vw;
   }
   .cocktail .bar .slider {
-    top: -2.66667vw;
+    top: -4.75vw;
   }
   .cocktail .bar .table {
     height: 61.62133vw;
@@ -545,9 +546,9 @@ section {
   margin-top: 0.39409vw;
 }
 
-.icebreaker .main {
-  width: 56.84729vw;
-  height: 73.10345vw;
+.main {
+  width: 44.33498vw;
+  height: auto;
 }
 
 .material {
@@ -563,7 +564,7 @@ section {
 }
 
 .material table {
-  width: 50.44335vw;
+  width: 68.96552vw;
   height: 18.71921vw;
   margin-top: 3.25123vw;
 }
@@ -573,10 +574,6 @@ section {
   text-align: center;
   vertical-align: middle;
   border: 1px solid #fef9f9;
-}
-
-.material table td p {
-  text-align: center;
   font-size: 1.57635vw;
 }
 
@@ -605,6 +602,16 @@ section {
   height: 36.25616vw;
 }
 
+.recipe .recipe-4 {
+  width: 5.91133vw;
+  height: 52.51232vw;
+}
+
+.recipe .recipe-5 {
+  width: 5.91133vw;
+  height: 68.57143vw;
+}
+
 .recipe .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -626,6 +633,8 @@ section {
 }
 
 .impression .content {
+  text-align: center;
   margin-top: 8.07882vw;
+  font-size: 1.97044vw;
 }
 /*# sourceMappingURL=style.css.map */

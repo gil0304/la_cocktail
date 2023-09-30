@@ -192,7 +192,7 @@ h2 {
     margin-top: pc-vw(162);
     position: relative;
 
-    .slider {
+    #slider {
       position: absolute;
       top: pc-vw(90);
     }
@@ -263,12 +263,12 @@ h2 {
   }
 
   .modal {
-    width: pc-vw(1015);
-    height: pc-vw(1200);
+    width: pc-vw(600);
+    height: 100vh;
     position: fixed;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -282,22 +282,23 @@ h2 {
     }
   }
 
-  #close {
-    position: fixed;
-    top: pc-vw(90);
-    right: pc-vw(240);
-    width: modal-vw(60);
-    height: modal-vw(60);
-    z-index: 11;
+  #mask {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
     opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     pointer-events: none;
     visibility: hidden;
     transition: all 1s ease;
 
     &.is-show {
-      opacity: 1;
+      opacity: 0.8;
       pointer-events: auto;
       visibility: visible;
+      z-index: 9;
     }
   }
 }
@@ -309,7 +310,7 @@ h2 {
     .bar {
       margin-top: sp-vw(29);
 
-      .slider {
+      #slider {
         top: sp-vw(-10);
       }
 
@@ -534,11 +535,9 @@ section {
   }
 }
 
-.icebreaker {
-  .main {
-    width: modal-vw(577);
-    height: modal-vw(742);
-  }
+.main {
+  width: modal-vw(450);
+  height: auto;
 }
 
 .material {
@@ -553,7 +552,7 @@ section {
   }
 
   table {
-    width: modal-vw(512);
+    width: modal-vw(700);
     height: modal-vw(190);
     margin-top: modal-vw(33);
 
@@ -562,11 +561,7 @@ section {
       text-align: center;
       vertical-align: middle;
       border: 1px solid #fef9f9;
-
-      p {
-        text-align: center;
-        font-size: modal-vw(16);
-      }
+      font-size: modal-vw(16);
     }
   }
 }
@@ -587,6 +582,16 @@ section {
     height: modal-vw(368);
   }
 
+  .recipe-4 {
+    width: modal-vw(60);
+    height: modal-vw(533);
+  }
+
+  .recipe-5 {
+    width: modal-vw(60);
+    height: modal-vw(696);
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -603,6 +608,8 @@ section {
   margin: modal-vw(149) 0 modal-vw(93);
 
   .content {
+    text-align: center;
     margin-top: modal-vw(82);
+    font-size: modal-vw(20);
   }
 }

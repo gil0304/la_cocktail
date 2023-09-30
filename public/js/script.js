@@ -40,15 +40,19 @@ const modalMockingbird = document.getElementById("modal-mockingbird");
 
 var clickSlide;
 
-const close = document.getElementById("close");
+const mask = document.getElementById("mask");
 
-function clickClose() {
-  close.classList.remove("is-show");
+function clickMask() {
+  if (mask.classList.contains("is-show")) {
+    mask.classList.remove("is-show");
+  } else {
+    mask.classList.add("is-show");
+  }
 }
 
 splide.on("click", function (e) {
   clickSlide = e.slide.firstElementChild;
-  close.classList.add("is-show");
+  clickMask();
 
   switch (clickSlide.getAttribute("id")) {
     case icebreaker.getAttribute("id"):
@@ -70,7 +74,7 @@ splide.on("click", function (e) {
       modalMatador.classList.add("is-show");
       break;
     case margarita.getAttribute("id"):
-      modalMatador.classList.add("is-show");
+      modalMargarita.classList.add("is-show");
       break;
     case mockingbird.getAttribute("id"):
       modalMockingbird.classList.add("is-show");
@@ -80,8 +84,8 @@ splide.on("click", function (e) {
   }
 });
 
-close.addEventListener("click", (event) => {
-  clickClose();
+mask.addEventListener("click", (event) => {
+  clickMask();
   switch (clickSlide.getAttribute("id")) {
     case icebreaker.getAttribute("id"):
       modalIcebreaker.classList.remove("is-show");
@@ -102,7 +106,7 @@ close.addEventListener("click", (event) => {
       modalMatador.classList.remove("is-show");
       break;
     case margarita.getAttribute("id"):
-      modalMatador.classList.remove("is-show");
+      modalMargarita.classList.remove("is-show");
       break;
     case mockingbird.getAttribute("id"):
       modalMockingbird.classList.remove("is-show");
