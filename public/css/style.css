@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://use.typekit.net/yyu4vbk.css");
 @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+html {
+  font-size: 1vw;
+}
+
 body {
   background-color: #040b1e;
   color: #fef9f9;
@@ -16,30 +20,338 @@ h2 {
   color: #ffe943;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
+section h2 {
+  margin-top: 12vw;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+.title-svg {
+  position: absolute;
+  top: 0;
+  left: 2vw;
+  height: 15vw;
+}
+
 .sp-svg {
   display: none;
 }
 
-.top {
-  margin-top: 11.59722vw;
+.splide .splide__track {
+  height: 30vw;
+}
+.splide .is-active .glass {
+  transform: scale(1);
+}
+.splide .glass {
+  width: 100%;
+  height: 100%;
   position: relative;
+  bottom: 0;
+  transform: scale(0.8);
+  transition: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.splide .glass img {
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.splide .glass p {
+  width: 40%;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: center;
+}
+.splide .rock img {
+  height: 40%;
+}
+.splide .rock p {
+  bottom: 4vw;
+}
+.splide .long img {
+  height: 64%;
+}
+.splide .long p {
+  bottom: 6vw;
+}
+.splide .cocktail-glass img {
+  height: 50%;
+}
+.splide .cocktail-glass p {
+  bottom: 12vw;
+}
+.splide .wine img {
+  height: 68%;
+}
+.splide .wine p {
+  bottom: 16vw;
 }
 
-.top .top-img {
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 41.38889vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s ease;
+}
+.modal .modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal .modal-content {
+  width: 63%;
+  min-height: 81%;
+  position: relative;
+  z-index: 9999;
 }
 
+.top {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: end;
+}
+.top img {
+  width: 100%;
+}
 .top h1 {
   position: absolute;
-  top: 14.02778vw;
-  left: 65.13889vw;
-  font-size: 4.44444vw;
-  letter-spacing: 1.33333vw;
+  font-size: 3.3rem;
+  letter-spacing: 2rem;
 }
 
 .sp-top {
   display: none;
+}
+
+.about {
+  min-height: 66vw;
+}
+.about .svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  z-index: -1;
+}
+.about .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .content p {
+  margin-top: 12vw;
+  font-size: 1.2rem;
+  line-height: 3;
+  text-align: center;
+}
+.about .content .sp-br {
+  display: none;
+}
+
+.cocktail {
+  min-height: 90vw;
+  align-items: center;
+}
+.cocktail .bar {
+  width: 100%;
+  margin-top: 10vw;
+  position: relative;
+}
+.cocktail .bar .slider {
+  position: absolute;
+  width: 100%;
+}
+.cocktail .bar .table {
+  width: 100%;
+}
+
+.store {
+  align-items: center;
+}
+.store .svg {
+  position: absolute;
+  left: 0;
+  top: 30vw;
+  width: 80%;
+  z-index: -1;
+}
+.store .store-wrapper {
+  margin-top: 12vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12vw;
+}
+.store .store-wrapper .container {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+}
+.store .store-wrapper .container img {
+  width: 24vw;
+}
+.store .store-wrapper .container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+.store .store-wrapper .container .content p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.store .store-wrapper .container .content p span {
+  font-size: 1.8rem;
+}
+
+footer {
+  margin: 150px 0 20px;
+}
+footer p {
+  font-family: superior-title, serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vw;
+}
+main img {
+  width: 50%;
+}
+
+.title {
+  font-size: 6rem;
+  font-family: "Sawarabi Mincho", serif;
+  margin-top: 12vw;
+}
+
+.subtitle {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.cocktail-about {
+  min-height: 24vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5vw;
+}
+.cocktail-about img {
+  width: 36%;
+}
+.cocktail-about .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+}
+.cocktail-about .content p:nth-child(1) {
+  font-size: 3rem;
+}
+.cocktail-about .content p:nth-child(2) {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.material {
+  min-height: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+.material img {
+  position: absolute;
+  right: 0;
+  width: 72%;
+  z-index: -1;
+}
+.material table {
+  width: 72%;
+  height: 24vw;
+}
+.material table td {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #fef9f9;
+  font-size: 2rem;
+}
+
+.recipe {
+  min-height: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+.recipe .container {
+  display: flex;
+  -moz-column-gap: 9vw;
+       column-gap: 9vw;
+}
+.recipe .recipe-3 {
+  width: 6vw;
+  height: 36.8vw;
+}
+.recipe .recipe-4 {
+  width: 6vw;
+  height: 53.3vw;
+}
+.recipe .recipe-5 {
+  width: 6vw;
+  height: 69.6vw;
+}
+.recipe .content {
+  margin: 1vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recipe .content p {
+  font-size: 2rem;
+}
+
+.impression {
+  min-height: 45vw;
+  display: flex;
+  gap: 5vw;
+}
+.impression .content {
+  text-align: center;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 450px) {
@@ -52,589 +364,97 @@ h2 {
   .top {
     display: none;
   }
-  .sp-top {
-    display: block;
-    position: relative;
-  }
-  .sp-top img {
-    width: 100vw;
-  }
-  .sp-top h1 {
-    position: absolute;
-    top: 94.4vw;
-    right: 7.46667vw;
-    font-size: 8.53333vw;
-    letter-spacing: 1.70667vw;
-    line-height: 1.7;
-  }
-  .header {
+  .title-svg {
     display: none;
   }
-}
-
-.about {
-  margin-top: 14.79167vw;
-  position: relative;
-}
-
-.about .svg {
-  position: absolute;
-  top: -2.56944vw;
-  right: 0;
-  width: 44.16667vw;
-  height: 83.33333vw;
-  z-index: -1;
-}
-
-.about .header {
-  position: absolute;
-  top: 0;
-  left: 0.41667vw;
-  width: 51.59722vw;
-  height: 21.94444vw;
-}
-
-.about .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about .content h2 {
-  margin-top: 14.65278vw;
-  font-size: 2.22222vw;
-  font-weight: 900;
-}
-
-.about .content p {
-  margin-top: 11.11111vw;
-  font-size: 1.11111vw;
-  line-height: 3;
-  text-align: center;
-}
-
-.about .content .sp-br {
-  display: none;
-}
-
-@media screen and (max-width: 450px) {
+  section h2 {
+    font-size: 10rem;
+  }
+  .sp-top {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100vw;
+    height: 100vh;
+  }
+  .sp-top img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .sp-top h1 {
+    font-size: 9rem;
+    letter-spacing: 2rem;
+    line-height: 1.8;
+    margin-right: 6vw;
+  }
   .about {
-    margin-top: 23.73333vw;
+    min-height: 100vw;
   }
   .about .svg {
-    top: -15.73333vw;
-    width: 69.33333vw;
-    height: 81.33333vw;
-  }
-  .about .content h2 {
-    margin-top: 0;
-    font-size: 4.26667vw;
+    top: 10vw;
+    width: 75%;
   }
   .about .content p {
-    margin-top: 16vw;
-    font-size: 3.2vw;
-    line-height: 2;
+    font-size: 3rem;
+    line-height: 3;
   }
   .about .content .sp-br {
     display: inline;
   }
-}
-
-.cocktail {
-  margin-top: 23.05556vw;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cocktail .header {
-  position: absolute;
-  top: 0;
-  left: 0.41667vw;
-  width: 71.11111vw;
-  height: 21.94444vw;
-}
-
-.cocktail h2 {
-  margin-top: 14.79167vw;
-  font-weight: 900;
-  font-size: 2.22222vw;
-}
-
-.cocktail .bar {
-  margin-top: 11.25vw;
-  position: relative;
-}
-
-.cocktail .bar #slider {
-  position: absolute;
-  top: 6.25vw;
-}
-
-.cocktail .bar .table {
-  width: 100vw;
-  height: 53.88889vw;
-}
-
-.cocktail .bar .splide {
-  width: 100vw;
-}
-
-.cocktail .bar .splide .splide__list {
-  position: relative;
-}
-
-.cocktail .bar .splide .is-active .glass {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  z-index: 1;
-}
-
-.cocktail .bar .splide .glass {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.cocktail .bar .splide .glass img {
-  vertical-align: baseline;
-}
-
-.cocktail .bar .splide .glass .rock {
-  width: 7.70833vw;
-  height: 10.97222vw;
-  margin-top: 11.45833vw;
-}
-
-.cocktail .bar .splide .glass .long {
-  width: 14.23611vw;
-  height: 22.56944vw;
-}
-
-.cocktail .bar .splide .glass .cocktail-glass {
-  width: 11.875vw;
-  height: 19.23611vw;
-  margin-top: 3.33333vw;
-}
-
-.cocktail .bar .splide .glass .wine {
-  width: 10.13889vw;
-  height: 22.56944vw;
-  margin-top: 0.13889vw;
-}
-
-.cocktail .bar .splide .glass p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 1.11111vw;
-  font-family: "Sawarabi Mincho", serif;
-}
-
-.cocktail .modal {
-  width: 41.66667vw;
-  height: 100vh;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.cocktail .modal.is-show {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-  z-index: 10;
-}
-
-.cocktail #mask {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  visibility: hidden;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.cocktail #mask.is-show {
-  opacity: 0.8;
-  pointer-events: auto;
-  visibility: visible;
-  z-index: 9;
-}
-
-@media screen and (max-width: 450px) {
   .cocktail {
-    margin-top: 37.06667vw;
+    min-height: 100vw;
   }
-  .cocktail .bar {
-    margin-top: 7.73333vw;
+  .cocktail .slider {
+    top: -2vw;
   }
-  .cocktail .bar .slider {
-    top: -4.75vw;
-  }
-  .cocktail .bar .table {
-    height: 61.62133vw;
-  }
-  .cocktail .bar .splide .glass .rock {
-    width: 13.6vw;
-    height: 19.35733vw;
-    margin-top: 16.98133vw;
-  }
-  .cocktail .bar .splide .glass .long {
-    width: 22.93333vw;
-    height: 36.35733vw;
-  }
-  .cocktail .bar .splide .glass .cocktail-glass {
-    width: 19.52267vw;
-    height: 31.624vw;
-    margin-top: 4.53333vw;
-  }
-  .cocktail .bar .splide .glass .wine {
-    width: 15.57333vw;
-    height: 34.66667vw;
-    margin-top: 1.6vw;
-  }
-  .cocktail h2 {
-    font-size: 4.26667vw;
-  }
-}
-
-.store {
-  margin-top: 12.70833vw;
-  padding-top: 14.79167vw;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.store .svg {
-  position: absolute;
-  left: 0;
-  top: 21.45833vw;
-  width: 84.72222vw;
-  height: 79.09722vw;
-  z-index: -1;
-}
-
-.store .header {
-  position: absolute;
-  top: 0;
-  left: 0.41667vw;
-  width: 45vw;
-  height: 21.94444vw;
-}
-
-.store h2 {
-  font-weight: 900;
-  font-size: 2.22222vw;
-}
-
-.store .store-warp {
-  margin-top: 10.20833vw;
-}
-
-.store .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 15vw;
-          column-gap: 15vw;
-}
-
-.store .container:nth-child(2) {
-  margin: 12.43056vw 0 14.02778vw;
-}
-
-.store .container img {
-  width: 21.45833vw;
-  height: 15.41667vw;
-}
-
-.store .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  row-gap: 3.125vw;
-}
-
-.store .content p {
-  text-align: center;
-  font-size: 1.11111vw;
-  line-height: 2;
-}
-
-.store .content p span {
-  font-size: 1.66667vw;
-}
-
-@media screen and (max-width: 450px) {
-  .store {
-    margin-top: 28.77867vw;
+  .cocktail .slider .glass p {
+    width: 10%;
+    font-size: 1.8rem;
   }
   .store .svg-store-1 {
-    top: 92.8vw;
-    width: 63.46667vw;
-    height: 93.06667vw;
+    top: 30vw;
+    position: absolute;
+    left: 0;
+    width: 72%;
+    z-index: -1;
   }
   .store .svg-store-2 {
-    top: 239.73333vw;
-    left: 62.13333vw;
-    width: 37.86667vw;
-    height: 81.33333vw;
+    top: 180vw;
+    position: absolute;
+    right: 0;
+    width: 72%;
+    z-index: -1;
   }
-  .store h2 {
-    font-size: 4.26667vw;
+  .store .store-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18vw;
   }
-  .store .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    row-gap: 10.4vw;
+  .store .store-wrapper .container {
+    flex-direction: column;
+    gap: 10vw;
   }
-  .store .container:nth-child(2) {
-    margin: 38.93333vw 0;
+  .store .store-wrapper .container img {
+    width: 80%;
   }
-  .store .container img {
-    width: 45.33333vw;
-    height: 32.57067vw;
+  .store .store-wrapper .container .content {
+    width: 100%;
+    gap: 10vw;
   }
-  .store .content {
-    row-gap: 8vw;
+  .store .store-wrapper .container .content p {
+    font-size: 3rem;
   }
-  .store .content p {
-    font-size: 3.2vw;
+  .store .store-wrapper .container .content p span {
+    font-size: 4.2rem;
   }
-  .store .content p span {
-    font-size: 3.73333vw;
+  footer {
+    margin: 40vw 0 5vw;
   }
-}
-
-.footer {
-  margin: 33.68056vw 0 4.72222vw;
-}
-
-.footer p {
-  font-family: superior-title, serif;
-  font-size: 0.83333vw;
-  text-align: center;
-}
-
-@media screen and (max-width: 450px) {
-  .footer {
-    margin: 20.53333vw 0 21;
+  footer p {
+    font-size: 3rem;
   }
-  .footer p {
-    font-size: 2.13333vw;
-  }
-}
-
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.title {
-  font-size: 4.72906vw;
-  font-family: "Sawarabi Mincho", serif;
-  margin: 10.93596vw 0 -0.09852vw;
-}
-
-.subtitle {
-  font-size: 1.97044vw;
-  text-align: center;
-}
-
-.cocktail-about {
-  width: 100vw;
-  margin-top: 1.87192vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 27.29064vw;
-          column-gap: 27.29064vw;
-}
-
-.cocktail-about img {
-  width: 26.40394vw;
-  height: 4.92611vw;
-}
-
-.cocktail-about .content p:nth-child(1) {
-  font-size: 1.57635vw;
-}
-
-.cocktail-about .content p:nth-child(2) {
-  font-size: 2.36453vw;
-  font-weight: bold;
-  margin-top: 0.39409vw;
-}
-
-.main {
-  width: 44.33498vw;
-  height: auto;
-}
-
-.material {
-  margin-top: 8.17734vw;
-}
-
-.material img {
-  position: absolute;
-  top: 107.88177vw;
-  right: 0;
-  width: 64.53202vw;
-  z-index: -1;
-}
-
-.material table {
-  width: 68.96552vw;
-  height: 18.71921vw;
-  margin-top: 3.25123vw;
-}
-
-.material table td {
-  width: 50%;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid #fef9f9;
-  font-size: 1.57635vw;
-}
-
-.recipe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 6.30542vw;
-}
-
-.recipe .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 7.68473vw;
-          column-gap: 7.68473vw;
-  margin-top: 9.85222vw;
-}
-
-.recipe .recipe-3 {
-  width: 5.91133vw;
-  height: 36.25616vw;
-}
-
-.recipe .recipe-4 {
-  width: 5.91133vw;
-  height: 52.51232vw;
-}
-
-.recipe .recipe-5 {
-  width: 5.91133vw;
-  height: 68.57143vw;
-}
-
-.recipe .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 14.58128vw;
-  margin-top: 0.59113vw;
-}
-
-.recipe .content p {
-  font-size: 1.57635vw;
-}
-
-.impression {
-  margin: 14.6798vw 0 9.16256vw;
-}
-
-.impression .content {
-  text-align: center;
-  margin-top: 8.07882vw;
-  font-size: 1.97044vw;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
