@@ -1,5 +1,6 @@
 const options = {
   arrows: false,
+  pagination: false,
   type: "loop",
   perPage: 5,
   focus: "center",
